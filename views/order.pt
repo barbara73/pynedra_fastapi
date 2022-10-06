@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <form method="POST">
+    <h2>Create Order Table</h2>
+
+    <fieldset>
+        <p>Create an order table with:</p>
+<!--                                                      <legend></legend>-->
+        <label>
+            <input id="sop" name="order_table" type="radio" value="sop" class="inline" checked>SOP Instance UID
+        </label>
+
+        <label>
+           <input id="series" name="order_table" type="radio" value="series" class="inline">Series UID
+       </label>
+    </fieldset>
+    <fieldset>
+       <label>
+           <input id="by_date" name="date_range" type="checkbox" class="inline" >By date-time:
+       </label>
+       <label>Start date-time:
+           <input id="start_time" name="date_range" type="date" class="date">
+       </label>
+       <label>End date-time:
+           <input id="end_time" name="date_range" type="date" class="date">
+       </label>
+    </fieldset>
+
+    <fieldset>
+        <label>
+           <input id="by_modality" name="modality" type="checkbox" class="inline" >By modality:
+        </label>
+           <select>
+               <option value="us">US</option>
+               <option value="ct">CT</option>
+               <option value="mr">MR</option>
+               <option value="cr">CR</option>
+             </select>
+        </label>
+
+    </fieldset>
+
+    <fieldset>
+        <label>
+           <input id="by_ids" name="uids" type="checkbox" class="inline" >By ID's:
+        </label>
+           <select>
+               <option value="pat_id">Patient ID</option>
+               <option value="study_id">Study ID</option>
+               <option value="series_id">Series ID</option>
+               <option value="instance_uid">SOP Instance UID</option>
+             </select>
+        </label>
+        <label>Choose the csv-file with above mentioned ID's:
+           <input id="id_file" name="uids" type="file">
+        </label>
+
+
+    </fieldset>
+    </fieldset>
+        <input type="submit" value="Create order table">
+    </form>
+
+</body>
+</html>

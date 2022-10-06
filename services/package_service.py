@@ -15,7 +15,7 @@ def package_count() -> int:
 
 def latest_packages(limit: int = 5) -> List:
     return [
-               {'id': 'fastapi', 'summary': "A great web framework"},
+               {'id': 'de-identify', 'summary': "De-identify DICOM images"},
                {'id': 'uvicorn', 'summary': "Your favorite ASGI server"},
                {'id': 'httpx', 'summary': "Requests for an async world"},
            ][:limit]
@@ -23,7 +23,7 @@ def latest_packages(limit: int = 5) -> List:
 
 def get_package_by_id(package_name: str) -> Optional[Package]:
     package = Package(
-        package_name, "This is the summary", "Full details here!",
+        package_name, "Option name description", "Full details here!",
         "https://fastapi.tiangolo.com/", "MIT", "Sebastián Ramírez"
     )
     return package

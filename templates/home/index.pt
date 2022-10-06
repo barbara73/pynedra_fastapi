@@ -6,8 +6,9 @@
             <div class="hero">
                 <div class="hero-inner">
                     <h1>
-                        Find, install and publish Python packages <br>
-                        with the Python Package Index
+                        Pynedra <br>
+                        <br>
+                        Download and deidentify DICOM images for transfer to Researcher
                     </h1>
 
                     <input type="text" class="form-control"
@@ -21,9 +22,10 @@
             </div>
 
             <div class="pypi-stats">
-                <div class="stat">${'{:,}'.format(package_count)} projects</div>
-                <div class="stat">${'{:,}'.format(release_count)} releases</div>
-                <div class="stat">${'{:,}'.format(user_count)} users</div>
+                <div class="stat">${'{:,}'.format(package_count)} patients</div>
+                <div class="stat">${'{:,}'.format(release_count)} study</div>
+                <div class="stat">${'{:,}'.format(user_count)} series</div>
+                <div class="stat">${'{:,}'.format(user_count)} series</div>
             </div>
 
             <div class="container project-list">
@@ -31,7 +33,7 @@
                     <div class="col-md-3"></div>
                     <div class="col-md-6">
 
-                        <h2>New releases</h2>
+                        <h2>Settings</h2>
                         <span class="subtitle">Hot off the press: the newest project releases</span>
 
 

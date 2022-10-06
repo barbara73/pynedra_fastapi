@@ -2,7 +2,7 @@
     <div metal:fill-slot="content" tal:omit-tag="True">
     <div class="form-container">
         <form action="" method="POST" class="account-form">
-            <h1>Register at PyPI</h1>
+            <h1>Register at Pynedra</h1>
 
             <input name="name" type="text" placeholder=" Your name" class="form-control" value="${ name }" required>
             <input name="email" type="email" placeholder=" Your email address" class="form-control" value="${ email }" required>
