@@ -1,0 +1,76 @@
+<div metal:use-macro="load: ../shared/_layout.pt">
+    <div metal:fill-slot="content" tal:omit-tag="True">
+        <div class="content details">
+
+            <div class="hero">
+                <div class="hero-inner">
+                    <h1>
+                        Create Order Table
+                    </h1>
+                </div>
+            </div>
+
+            <div class="pypi-stats">
+                <div class="stat">${'{:,}'.format(patient_count)} patients</div>
+                <div class="stat">${'{:,}'.format(study_count)} studies</div>
+                <div class="stat">${'{:,}'.format(series_count)} series</div>
+                <div class="stat">${'{:,}'.format(image_count)} images</div>
+            </div>
+            <br>
+            <br>
+            <label>
+                <input id="sop" name="order_table" type="radio" value="sop" class="inline" checked>SOP Instance UID
+            </label>
+            <label>
+               <input id="series" name="order_table" type="radio" value="series" class="inline">Series UID
+           </label>
+            <br>
+            <br>
+           <label>
+               <input id="by_date" name="date_range" type="checkbox" class="inline" >By date-time:
+           </label>
+           <label>Start date-time:
+               <input id="start_time" name="date_range" type="date" class="date">
+           </label>
+           <label>End date-time:
+               <input id="end_time" name="date_range" type="date" class="date">
+           </label>
+            <br>
+            <br>
+            <label>
+               <input id="by_modality" name="modality" type="checkbox" class="inline" >By modality:
+            </label>
+               <select>
+                   <option value="us">US</option>
+                   <option value="ct">CT</option>
+                   <option value="mr">MR</option>
+                   <option value="cr">CR</option>
+                 </select>
+            </label>
+            <br>
+            <br>
+            <label>
+               <input id="by_ids" name="uids" type="checkbox" class="inline" >By ID's:
+            </label>
+               <select>
+                   <option value="pat_id">Patient ID</option>
+                   <option value="study_id">Study ID</option>
+                   <option value="series_id">Series ID</option>
+                   <option value="instance_uid">SOP Instance UID</option>
+                 </select>
+            </label>
+            <br>
+            <br>
+            <label>Choose the csv-file with above-mentioned ID's:
+               <input id="id_file" name="uids" type="file">
+            </label>
+            <br>
+            <br>
+            <input type="submit" value="Create order table">
+        </div>
+    </div>
+
+    <div metal:fill-slot="additional-css" tal:omit-tag="True">
+        <!-- additional css from the page -->
+    </div>
+</div>

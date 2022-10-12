@@ -1,0 +1,37 @@
+<div metal:use-macro="load: ../shared/_layout.pt">
+    <div metal:fill-slot="content" tal:omit-tag="True">
+
+        <div class="content">
+
+            <div class="hero">
+                <div class="hero-inner">
+                    <h1>
+                        Settings
+                    </h1>
+                </div>
+            </div>
+
+
+            <div class="container project-list">
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6">
+
+                        <div class="project" tal:repeat="p packages">
+                            <div class="title"><a href="/option/settings/${p.id}">${p.id}</a></div>
+                            <div class="desc">${p.summary}</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3"></div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <div metal:fill-slot="additional-css" tal:omit-tag="True">
+        <!-- additional css from the page -->
+    </div>
+</div>

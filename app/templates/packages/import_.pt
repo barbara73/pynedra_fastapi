@@ -1,0 +1,34 @@
+<div metal:use-macro="load: ../shared/_layout.pt">
+    <div metal:fill-slot="content" tal:omit-tag="True">
+        <div class="content details">
+            <div class="project-list container">
+                <div class="row">
+                    <div class="col-sm-3 nav-sidebar-section">
+
+                        <h3>Option</h3>
+                            <label>
+                                <input id="synedra" name="from_folder" type="radio" value="synedra" class="inline" checked>Synedra
+                            </label>
+                            <label>
+                                <input id="source_folder" name="from_folder" type="radio" value="folder" class="inline">Source path
+                                <input id="source_path" name="from_folder" type="text" class="inline" placeholder="source path">
+                            </label>
+
+                        <hr>
+                    </div>
+
+                    <div class="col-sm-7">
+
+                        <h2>Import</h2>
+                        <pre>${ package.description.strip() }
+                        </pre>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div metal:fill-slot="additional-css"  tal:omit-tag="True">
+        <link rel="stylesheet" href="/static/css/package.css">
+    </div>
+</div>

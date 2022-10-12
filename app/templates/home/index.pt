@@ -1,0 +1,41 @@
+<div metal:use-macro="load: ../shared/_layout.pt">
+    <div metal:fill-slot="content" tal:omit-tag="True">
+
+        <div class="content">
+
+            <div class="hero">
+                <div class="hero-inner">
+                    <h1>
+                        Synedra Export Service
+                    </h1>
+
+                    <input type="text" class="form-control"
+                           placeholder=" Search for options">
+
+                </div>
+            </div>
+
+
+            <div class="container project-list">
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6">
+
+                        <div class="project" tal:repeat="o option">
+                            <div class="title"><a href="/option/${o.id}">${o.id}</a></div>
+                            <div class="desc">${o.summary}</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3"></div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <div metal:fill-slot="additional-css" tal:omit-tag="True">
+        <!-- additional css from the page -->
+    </div>
+</div>

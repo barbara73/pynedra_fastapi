@@ -1,0 +1,55 @@
+<div metal:use-macro="load: ../shared/_layout.pt">
+    <div metal:fill-slot="content" tal:omit-tag="True">
+        <div class="content details">
+            <div class="project-list container">
+                <div class="row">
+                    <div class="col-sm-3 nav-sidebar-section">
+
+                        <h3>Option</h3>
+                            <label>
+                                <input name="dicom" type="checkbox" class="inline" checked>Save DICOM image
+                            </label>
+
+                            <label>to<br>
+                                <input id="s3" name="target" type="radio" value="s3" class="inline">S3
+                            </label>
+
+                            <label>
+                                <input id="target_folder" name="target" type="radio" value="target_folder" class="inline" checked>Target path
+                                <input id="target_path" name="target" type="text" class="inline" placeholder="target path">
+                            </label>
+                            <br>
+                            <br>
+                            <label>
+                                <input name="dicom_header" type="checkbox" class="inline" checked>DICOM header
+                            </label>
+                            <label>
+                                <input name="dicom_tags" type="checkbox" class="inline" checked>DICOM tags
+                            </label>
+
+                            <label>to DB: VM-90852
+                                <select>
+                                    <option value="synedra_export">SynedraExport</option>
+                                    <option value="pycasso">Pycasso</option>
+                                    <option value="pynedra">Pynedra</option>
+                                </select>
+                            </label>
+
+                        <hr>
+                    </div>
+
+                    <div class="col-sm-7">
+
+                        <h2>Export</h2>
+                        <pre>${ package.description.strip() }
+                        </pre>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div metal:fill-slot="additional-css"  tal:omit-tag="True">
+        <link rel="stylesheet" href="/static/css/package.css">
+    </div>
+</div>
